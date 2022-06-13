@@ -66,6 +66,8 @@ function newbingo() {
 		  $('#FreeSpace').attr('src',"./images/"+shortname+".png");
 		}
 	  }
-
+	updateTable();
+	window.setInterval(function(){
+		updateTable();
+	}, 2500);
 }
-
