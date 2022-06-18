@@ -51,16 +51,16 @@
      	      <br>
 			  <br>
 		<label for="seed">Bingo seed</label>
-        <input type="text" id="seed" name="seed"><br><br>
+        <input type="text" id="seed" name="seed">
+		<a class="sortButton" onclick="copyCommandToCB()" onmouseout="outFunc()"><img src="images/copy.png" style="vertical-align:middle;" height="16"></a>
+		<br><br>
+		
 		<a class="sortButton" href="#" onclick="seedPage()">Generate Card From Seed</a>
-		<br>								
-
-								<br>
-
-				<br>
-
-				
-<br><br>
+		<br>
+		<br>
+		<span id="copyToolTip" style="display: none">Copied command to clipboard! <img src="images/blah.gif" style="vertical-align:middle;" height="32"></span>
+		<br>
+		<br>
 				<h2 style="margin-top:20px; padding-top:0px"><p class="center"><b>Watch the streams at:</b>
         </p></h2><h2 class="center"><a href="https://www.twitch.tv/naro" target="_blank" class="center"><img src="images/GlitchW.png" style="vertical-align:middle;margin-left:5px;" height="32"></a><p></p>
 <br>
@@ -133,7 +133,7 @@
 
 </div></div></div></h>
 
-<div style="vertical-align:middle; display: block;position: fixed; left: 5px; top: 0px; min-width: 200px; height: 40vh ; width: 15vw; overflow: scroll;">
+<div style="vertical-align:middle; display: block;position: fixed; left: 5px; top: 0px; min-width: 200px; height: 40vh ; width: 15vw; overflow-y: scroll;">
 	<table id="registrations"></table>
 </div>
 

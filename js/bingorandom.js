@@ -89,7 +89,15 @@ function seedPage() {
 	return false;
 }
 
-
+function copyCommandToCB() {
+	let seed = $('#seed').val();
+	let copyResult = `!setseed ${seed}`
+	
+	navigator.clipboard.writeText(copyResult)
+	
+	$('#copyToolTip').fadeIn(500);
+	$('#copyToolTip').fadeOut(10000);
+}
 
 // Backwards Compatability 
 var srl = { bingo:bingo };

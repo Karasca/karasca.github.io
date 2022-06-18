@@ -81,3 +81,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1B676B', end
 .italic {
     font-style: italic;
 }
+
+#seed {
+	height: 26px;
+}
+
+#copyToolTip {
+	color: #99EDCC;
+}
