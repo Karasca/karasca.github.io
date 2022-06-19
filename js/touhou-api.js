@@ -1,12 +1,11 @@
 function updateTable(){	
-	const evtSource = new EventSource('https://karasca.com/registrations/')
+	const evtSource = new EventSource('http://localhost:3000/registrations/')
 	var htmlResult = `<tr><th id="th-reg">Username</th><th id="th-reg">Seed</th>`;
 	
 	let jsonRes = []
 
 	evtSource.onmessage = (e) => {
-		const parsed = JSON.parse(e.data)
-		jsonRes = jsonRes.concat(parsed);
+		jsonRes = JSON.parse(e.data)
 
 		jsonRes.forEach((item) => {
 		  	htmlResult += `<tr id="tr-reg"><td>${item.username}</td><td>${item.seed}</td></tr>`
