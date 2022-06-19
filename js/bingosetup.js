@@ -7,7 +7,6 @@ function newbingo() {
 	var searchParams = new URLSearchParams(window.location.search)
 	var urlSeed
 	urlSeed = $('#seed').val();
-	console.log(urlSeed);
 	
 	if(urlSeed == ''){
 		if(searchParams.has('seed')){
@@ -67,7 +66,4 @@ function newbingo() {
 		}
 	  }
 	updateTable();
-	window.setInterval(function(){
-		updateTable();
-	}, 2500);
 }

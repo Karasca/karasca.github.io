@@ -43,7 +43,6 @@ function initBoard(){
 }
 
 var bingo = function(bingoList, size, type, seed) {
-	console.log(bingoList);
 	var bingoBoard = seededShuffle(bingoList, seed);
 
 	//var bingoGeneric = _.shuffle(bingoListGeneric);
@@ -62,8 +61,6 @@ var bingo = function(bingoList, size, type, seed) {
 	}
 	$("#bingo tr td:not(.popout), #selected td").removeClass("blank redsquare greensquare");
 	$("#bingo tr td:not(.popout), #selected td").addClass("blank");
-
-	console.log("yo!");
 	
 	for (i=0;i<25;i++) {
 		$('#slot'+(i+1)).text(bingoComplete[i]);
@@ -95,8 +92,8 @@ function copyCommandToCB() {
 	
 	navigator.clipboard.writeText(copyResult)
 	
-	$('#copyToolTip').fadeIn(500);
-	$('#copyToolTip').fadeOut(10000);
+	$('#copyToolTip').fadeTo(500, 100);
+	$('#copyToolTip').fadeTo(10000, 0);
 }
 
 // Backwards Compatability 

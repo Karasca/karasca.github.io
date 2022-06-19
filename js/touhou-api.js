@@ -1,16 +1,40 @@
 function updateTable(){	
+	const evtSource = new EventSource('https://karasca.com/registrations/')
 	var htmlResult = `<tr><th id="th-reg">Username</th><th id="th-reg">Seed</th>`;
 	
-	$.getJSON('https://karasca.com/registrations/', function(data) {
-	data.forEach(e => {
-		if(e != "undefined"){
-			htmlResult += `<tr id="tr-reg"><td>${e.username}</td><td>${e.seed}</td></tr>`
-		}
+	let jsonRes = []
+
+	evtSource.onmessage = (e) => {
+		const parsed = JSON.parse(e.data)
+		jsonRes = jsonRes.concat(parsed);
+
+		jsonRes.forEach((item) => {
+		  	htmlResult += `<tr id="tr-reg"><td>${item.username}</td><td>${item.seed}</td></tr>`
+		})
+		$('#registrations').html(htmlResult);
+		jsonRes = []
+	}
+
+	evtSource.addEventListener("clear", (e) => {
+		console.log(e.data);
+
+		htmlResult = `<tr><th id="th-reg">Username</th><th id="th-reg">Seed</th>`;
+		$('#registrations').html(htmlResult);
+		jsonRes = []
 	})
-	
-	htmlResult+= `</tr>`
-	
-	$('#registrations').html(htmlResult);
-  });
+
+	evtSource.addEventListener("open-bingo", (e) => {
+		console.log(e.data);
+		console.log("Bingo Open!");
+	})
+
+	evtSource.addEventListener("close-bingo", (e) => {
+		console.log(e.data);
+		console.log("Bingo Closed!");
+	})
+
+	$(window).on('beforeunload', function(){
+		evtSource.close();
+	});
 	
 }

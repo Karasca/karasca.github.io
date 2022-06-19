@@ -44,6 +44,6 @@ bingoListTouhouRember = [
 'Morichika Rinnosuke'
 ];
 
-console.log('bingoListTouhouRember = ' + bingoListTouhouRember);
+//console.log('bingoListTouhouRember = ' + bingoListTouhouRember);
 
 }
