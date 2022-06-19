@@ -1,5 +1,5 @@
 function updateTable(){	
-	const evtSource = new EventSource('http://localhost:3000/registrations/')
+	const evtSource = new EventSource('https://karasca.com/registrations/')
 	var htmlResult = `<tr><th id="th-reg">Username</th><th id="th-reg">Seed</th>`;
 	
 	let jsonRes = []
