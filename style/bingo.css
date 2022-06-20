@@ -90,3 +90,41 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1B676B', end
 	color: #99EDCC;
 }
 
+#hintBox {
+  position: fixed; 
+  left: 0px; 
+  bottom: 0px; 
+  display:flex;
+}
+
+#koisher {
+  display: inline;
+  min-width: 200px; 
+  width: 15vw;
+  align-self: center;
+}
+
+.message {
+  align-self: center;
+  margin: 0px 25px;
+  background-color: rgba(156, 82, 139, 0.3);
+  border-radius: 25px;
+
+}
+
+.message-text {
+  font-size: 1.5em;
+  padding-left: 20px;
+  padding-bottom: 65px;
+  display: block;
+  padding-right: 15px;
+}
+
+#koishi-name {
+  display:block;
+  font-size: 2em;
+  color:#99EDCC;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 50px;
+}
