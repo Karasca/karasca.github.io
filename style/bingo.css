@@ -130,7 +130,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1B676B', end
   padding-bottom: 50px;
 }
 
-
-#registrationsTable {
-  pointer-events: none;
+@media only screen and (max-width: 1600px) {
+  #registrationsTable {
+    display: none !important;
+  }
 }
