@@ -95,6 +95,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1B676B', end
   left: 0px; 
   bottom: 0px; 
   display:flex;
+  pointer-events: none;
 }
 
 #koisher {
