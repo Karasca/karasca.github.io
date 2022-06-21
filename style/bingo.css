@@ -109,7 +109,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1B676B', end
   margin: 0px 25px;
   background-color: rgba(156, 82, 139, 0.3);
   border-radius: 25px;
-
+  pointer-events: none;
 }
 
 .message-text {
@@ -127,4 +127,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1B676B', end
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 50px;
+}
+
+
+#registrationsTable {
+  pointer-events: none;
 }
