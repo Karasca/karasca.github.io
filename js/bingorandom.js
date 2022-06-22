@@ -96,5 +96,22 @@ function copyCommandToCB() {
 	$('#copyToolTip').fadeTo(10000, 0);
 }
 
+function toggleReg(){
+	$('#registrationsTable').toggle();
+	if($('#registrationsTable').is(":hidden")){
+		$('#toggleButton').html(">>>")
+		$('#toggleButton').css("background-color", "rgba(156, 82, 139, 0.3)")
+	}else{
+		$('#toggleButton').html("<<<")
+		$('#toggleButton').css("background-color", "rgba(156, 82, 139, 0.1)")
+	}
+}
+
+function koishiPeace(){
+	$('#hintBox').fadeOut(5000,0);
+	$('#koisher').attr('src',"./images/Koish3.png");
+	$('#koisher').css("height", "150px");
+}
+
 // Backwards Compatability 
 var srl = { bingo:bingo };

@@ -134,13 +134,15 @@
 
 </div></div></div></h>
 
-<div id="registrationsTable" style="display: block;position: fixed; left: 5px; top: 0px; min-width: 200px; height: 40vh ; width: 15vw; overflow-y: scroll;">
-	<table id="registrations"></table>
+<div id="registration">
+	<div id="registrationsTable">
+		<table id="registrations"></table>
+	</div>
+	<div id="toggleButton" onclick="toggleReg()"><<<</div>
 </div>
 
-
 <div id="hintBox">
-	<img src="images/Koish1.png" id="koisher">
+	<img src="images/Koish1.png" id="koisher" onclick="koishiPeace()">
 	<div class="message">
 		<span id="koishi-name">Koishi</span>
 		<span class="message-text" id="message-status">Head Empty</span></div>
