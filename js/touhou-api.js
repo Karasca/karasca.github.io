@@ -12,7 +12,7 @@ function updateTable(){
 		if(Array.isArray(jsonRes)){
 			var htmlResult = `<tr><th id="th-reg">Username</th><th id="th-reg">Seed</th>`;
 			jsonRes.forEach((item) => {
-				  htmlResult += `<tr id="tr-reg"><td>${item.username}</td><td>${item.seed}</td></tr>`
+				  htmlResult += `<tr id="tr-reg"><td><a href="https://twitch.com/${item.username}">${item.username}</a></td><td><a href="https://karasca.github.io/?seed=${item.seed}">${item.seed}</a></td></tr>`
 			})
 			$('#registrations').html(htmlResult);
 			jsonRes = []
