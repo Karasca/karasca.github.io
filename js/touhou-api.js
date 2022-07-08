@@ -15,7 +15,7 @@ function updateTable(){
 	const remoteUrl = `https://karasca.com/registrations?stream=${urlStream}`
 	const localUrl = `http://localhost:3000/registrations?stream=${urlStream}`
 
-	const evtSource = new EventSource(localUrl);
+	const evtSource = new EventSource(remoteUrl);
 	
 	let jsonRes = []
 
