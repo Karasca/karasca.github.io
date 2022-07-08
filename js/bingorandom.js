@@ -71,7 +71,7 @@ var bingo = function(bingoList, size, type, seed) {
 }; // setup
 
 function reseedPage() {
-	var qSeed = "?seed=" + Math.ceil(999999 * Math.random());
+	var qSeed = `?seed=${Math.ceil(999999 * Math.random())}&stream=${localStorage.getItem("stream")}`;
 	window.location = qSeed;
 	return false;
 }
@@ -81,7 +81,7 @@ function seedPage() {
 	var urlSeed
 	urlSeed = $('#seed').val();
 	
-	var qSeed = "?seed=" + urlSeed;
+	var qSeed = `?seed=${urlSeed}&stream=${localStorage.getItem("stream")}`;
 	window.location = qSeed;
 	return false;
 }

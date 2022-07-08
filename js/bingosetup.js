@@ -65,5 +65,16 @@ function newbingo() {
 		  $('#FreeSpace').attr('src',"./images/"+shortname+".png");
 		}
 	  }
+	  
+		  
 	updateTable();
+	
+	// change stream links/loc to current streamer
+	$('#streamName').text(`${truncate(localStorage.getItem("stream"), 25)}`)
+	$('#streamLink').attr("href", `https://twitch.tv/${localStorage.getItem("stream")}`)
+
+}
+
+function truncate(string, n){
+	return (string.length > n ) ? string.substr(0, n-1 ) + '...' : string
 }

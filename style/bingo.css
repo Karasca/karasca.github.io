@@ -152,3 +152,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1B676B', end
   cursor:pointer;
   height: 40vh;
 }
+
+#welcomeWrapper{
+	display: flex;
+	justify-content: center;
+	height: 95px;
+	width: 350px;
+	align-items: center;
+}
+
+#welcomeText{
+	text-align: center;
+}

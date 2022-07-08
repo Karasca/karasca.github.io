@@ -325,6 +325,7 @@ margin-right: 0px;
   padding-top: 18px;
   max-height: 467px;
   min-height: 467px;
+  overflow: hidden;
 }
 
 #boardList li {
