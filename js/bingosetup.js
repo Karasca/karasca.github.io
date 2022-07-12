@@ -12,7 +12,9 @@ function newbingo() {
 		if(searchParams.has('seed')){
 			urlSeed = searchParams.get('seed');
 		}else{
-			reseedPage();
+			if(searchParams.has('stream')){
+				reseedPage(searchParams.get('stream'))
+			}
 		}
 	}
 	

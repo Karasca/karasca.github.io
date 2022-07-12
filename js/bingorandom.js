@@ -70,8 +70,8 @@ var bingo = function(bingoList, size, type, seed) {
 	return true;
 }; // setup
 
-function reseedPage() {
-	var qSeed = `?seed=${Math.ceil(999999 * Math.random())}&stream=${localStorage.getItem("stream")}`;
+function reseedPage(stream) {
+	var qSeed = `?seed=${Math.ceil(999999 * Math.random())}&stream=${stream}`;
 	window.location = qSeed;
 	return false;
 }
