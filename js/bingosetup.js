@@ -14,6 +14,8 @@ function newbingo() {
 		}else{
 			if(searchParams.has('stream')){
 				reseedPage(searchParams.get('stream'))
+			}else{
+				reseedPage('naro')
 			}
 		}
 	}
