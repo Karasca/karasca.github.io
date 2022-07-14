@@ -71,17 +71,17 @@ var bingo = function(bingoList, size, type, seed) {
 }; // setup
 
 function reseedPage(stream) {
-	var qSeed = `?seed=${Math.ceil(999999 * Math.random())}&stream=${stream}`;
+	var qSeed = `?seed=${Math.ceil(999999 * Math.random())}&stream=${stream ? stream : localStorage.getItem("stream")}`;
 	window.location = qSeed;
 	return false;
 }
 
-function seedPage() {
+function seedPage(stream) {
 	var searchParams = new URLSearchParams(window.location.search)
 	var urlSeed
 	urlSeed = $('#seed').val();
 	
-	var qSeed = `?seed=${urlSeed}&stream=${localStorage.getItem("stream")}`;
+	var qSeed = `?seed=${urlSeed}&stream=${stream ? stream : localStorage.getItem("stream")}`;
 	window.location = qSeed;
 	return false;
 }

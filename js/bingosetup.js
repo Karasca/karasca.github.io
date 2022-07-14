@@ -7,13 +7,15 @@ function newbingo() {
 	var searchParams = new URLSearchParams(window.location.search)
 	var urlSeed
 	urlSeed = $('#seed').val();
-	
+	var urlStream
+
 	if(urlSeed == ''){
 		if(searchParams.has('seed')){
 			urlSeed = searchParams.get('seed');
 		}else{
 			if(searchParams.has('stream')){
-				reseedPage(searchParams.get('stream'))
+				urlStream = searchParams.get('stream')
+				reseedPage(urlStream)
 			}else{
 				reseedPage('naro')
 			}
